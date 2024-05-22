@@ -4,8 +4,11 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 
 export default function Home() {
-  let [topBarOpacity, setTopBarOpacity] = useState<number>(0.5);
-  let [topBarFontColor, setTopBarFontColor] = useState<string>('black');
+  let transParentPurple:string = 'rgba( 177, 16, 227, 0.5 )';
+  let darkYellow:string = 'rgba( 242, 240, 81, 1 )';
+
+  let [topBarBackgroundColor, setTopBarBackgroundColor] = useState<string>(transParentPurple);
+  let [topBarFontColor, setTopBarFontColor] = useState<string>('white');
 
   useEffect(() => {
     window.addEventListener('scroll', function() {
@@ -22,9 +25,12 @@ export default function Home() {
     
         // Check if scrolled all the way to the top
         if (scrollPosition === 0) {
-          setTopBarOpacity(0.5);
+          setTopBarBackgroundColor(transParentPurple);
+          setTopBarFontColor('white');
+
         }else{
-          setTopBarOpacity(1);
+          setTopBarBackgroundColor(darkYellow);
+          setTopBarFontColor('black');
         }
     
         // Check if scrolled down by 10% or more
@@ -39,22 +45,31 @@ export default function Home() {
   return (
     <div style={{backgroundColor:'green', height:'100vh'}}>
       <div style={{
-        backgroundColor:'yellow', 
+        backgroundColor: topBarBackgroundColor, 
         display:'flex', 
         justifyContent:'center', 
         alignItems:'center', 
         textAlign:'center', 
-        height:'80px', 
-        flexDirection:'row', 
+        height:'70px', 
+        flexDirection:'column', 
         position:'fixed',
         width:'100%',
-        opacity: topBarOpacity,
+        transition: 'background-color 0.1s',
         }}>
-        <div style={{flex:'1', color: topBarFontColor}}>로고</div>
-        <div style={{flex:'1', color: topBarFontColor}}>가위바위보</div>
-        <div style={{flex:'1', color: topBarFontColor}}>다빈치게임</div>
-        <div style={{flex:'1', color: topBarFontColor}}>미개발</div>
-        <div style={{flex:'1', color: topBarFontColor}}>미개발</div>
+
+        <div style={{
+          display:"flex", 
+          flexDirection:"row", 
+          //backgroundColor:'green', 
+          maxWidth:'1200px',
+          width:'80%'}}>
+          <div style={{flex:'1', color: topBarFontColor, fontSize:'20px', transition: 'color 0.2s',}}>로고</div>
+          <div style={{flex:'1', color: topBarFontColor, fontSize:'20px', transition: 'color 0.2s'}}>가위바위보</div>
+          <div style={{flex:'1', color: topBarFontColor, fontSize:'20px', transition: 'color 0.2s'}}>다빈치게임</div>
+          <div style={{flex:'1', color: topBarFontColor, fontSize:'20px',transition: 'color 0.2s'}}>미개발</div>
+          <div style={{flex:'1', color: topBarFontColor, fontSize:'20px',transition: 'color 0.2s'}}>미개발</div>
+        </div>
+        
       </div>
 
 
