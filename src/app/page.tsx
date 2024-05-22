@@ -14,24 +14,24 @@ export default function Home() {
         position:'fixed',
         width:'100%',
         }}>
-        <div style={{flex:'1', color:'balck'}}>로고</div>
-        <div style={{flex:'1', color:'balck'}}>가위바위보</div>
-        <div style={{flex:'1', color:'balck'}}>다빈치게임</div>
-        <div style={{flex:'1', color:'balck'}}>미개발</div>
-        <div style={{flex:'1', color:'balck'}}>미개발</div>
+        <div style={{flex:'1', color:'black'}}>로고</div>
+        <div style={{flex:'1', color:'black'}}>가위바위보</div>
+        <div style={{flex:'1', color:'black'}}>다빈치게임</div>
+        <div style={{flex:'1', color:'black'}}>미개발</div>
+        <div style={{flex:'1', color:'black'}}>미개발</div>
       </div>
 
 
-      <div style={{backgroundColor:'red', height:'500px', color:'balck'}}>
+      <div style={{backgroundColor:'red', height:'500px', color:'black'}}>
         asdfasdf
       </div>
-      <div style={{backgroundColor:'blue', height:'500px', color:'balck'}}>
+      <div style={{backgroundColor:'blue', height:'500px', color:'black'}}>
         asdfasdf
       </div>
-      <div style={{backgroundColor:'purple', height:'500px', color:'balck'}}>
+      <div style={{backgroundColor:'purple', height:'500px', color:'black'}}>
         asdfasdf
       </div>
-      <div style={{backgroundColor:'orange', height:'500px', color:'balck'}}>
+      <div style={{backgroundColor:'orange', height:'500px', color:'black'}}>
         asdfasdf
       </div>
     </div>
